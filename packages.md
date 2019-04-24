@@ -1,3 +1,9 @@
+## Prerequsities
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 ### Install Apache
 ```bash
 sudo apt-get install apache2
@@ -25,4 +31,12 @@ sudo apt install openjdk-11-jdk
 ###### and for Java Open JDK 8 run:
 ```bash
 sudo apt install openjdk-8-jdk
+```
+### Installing Redis
+```bash
+sudo apt-get install redis-server
+```
+###### to enable Redis to start on system boot
+```bash
+sudo systemctl enable redis-server.service
 ```
