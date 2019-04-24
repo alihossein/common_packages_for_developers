@@ -16,3 +16,13 @@ sudo mysql_secure_installation
 ```bash
 sudo apt-get install php libapache2-mod-php
 ```
+
+### Install Java using the Ubuntu Open JDK binaries
+###### To install Ubuntu Java Open JDK version 11 execute:
+``` bash
+sudo apt install openjdk-11-jdk
+```
+###### and for Java Open JDK 8 run:
+```bash
+sudo apt install openjdk-8-jdk
+```
