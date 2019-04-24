@@ -26,7 +26,10 @@ sudo apt-get install php libapache2-mod-php
 ```bash
 sudo apt-get install php-redis
 ```
-
+###### Install xdebug PHP Extension
+```bash
+sudo apt-get install php-xdebug
+```
 ### Install Java using the Ubuntu Open JDK binaries
 ###### To install Ubuntu Java Open JDK version 11 execute:
 ``` bash
