@@ -22,6 +22,10 @@ sudo mysql_secure_installation
 ```bash
 sudo apt-get install php libapache2-mod-php
 ```
+###### Install Redis PHP Extension
+```bash
+sudo apt-get install php-redis
+```
 
 ### Install Java using the Ubuntu Open JDK binaries
 ###### To install Ubuntu Java Open JDK version 11 execute:
