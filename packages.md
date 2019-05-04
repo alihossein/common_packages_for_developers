@@ -58,7 +58,7 @@ sudo apt-get install redis-server
 sudo systemctl enable redis-server.service
 ```
 
-###Install CopyQ Clipboard Manager
+### Install CopyQ Clipboard Manager
 ```bash
 sudo add-apt-repository ppa:hluk/copyq
 ```
