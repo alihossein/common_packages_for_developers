@@ -28,7 +28,6 @@ sudo phpenmod mbstring
 sudo systemctl restart apache2
 ```
 
-
 ### Install PHP
 ```bash
 sudo apt-get install php libapache2-mod-php
@@ -57,4 +56,9 @@ sudo apt-get install redis-server
 ###### to enable Redis to start on system boot
 ```bash
 sudo systemctl enable redis-server.service
+```
+
+###Install CopyQ Clipboard Manager
+```bash
+sudo add-apt-repository ppa:hluk/copyq
 ```
