@@ -18,6 +18,17 @@ sudo apt-get install mysql-server
 sudo mysql_secure_installation
 ```
 
+### Install PhpMyAdmin
+``` bash
+sudo apt install phpmyadmin php-mbstring php-gettext
+```
+###### enable mbstring php extension and restart Apache service 
+```bash
+sudo phpenmod mbstring
+sudo systemctl restart apache2
+```
+
+
 ### Install PHP
 ```bash
 sudo apt-get install php libapache2-mod-php
