@@ -67,3 +67,16 @@ sudo add-apt-repository ppa:hluk/copyq
 ```bash
 sudo apt-get install composer
 ```
+
+### Install pip (pip is a Python package management tool)
+```bash
+sudo apt-get install python-pip
+```
+##### Install pip3
+```bash
+sudo apt-get install python3-pip
+```
+##### Update pip3
+```
+sudo pip3 install --upgrade pip
+```
