@@ -62,3 +62,8 @@ sudo systemctl enable redis-server.service
 ```bash
 sudo add-apt-repository ppa:hluk/copyq
 ```
+
+### Install Composer
+```bash
+sudo apt-get install composer
+```
