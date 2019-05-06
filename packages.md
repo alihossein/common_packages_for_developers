@@ -85,3 +85,8 @@ sudo pip3 install --upgrade pip
 ```bash
 sudo apt-get install python-mysqldb
 ```
+### Install mysqlclient
+```bash
+sudo pip3 install mysqlclient
+
+```
