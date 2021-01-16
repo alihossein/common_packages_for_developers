@@ -100,3 +100,24 @@ sudo apt-get install nodejs
 nodejs --version
 npm --version
 ```
+
+### Insall PHP and Nginx
+```
+sudo apt install software-properties-common
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt install php7.3 php7.3-common php7.3-opcache php7.3-cli php7.3-gd php7.3-curl php7.3-mysql
+sudo apt install php7.3-fpm php7.3-common php7.3-mysql php7.3-gmp php7.3-curl php7.3-intl php7.3-mbstring php7.3-xmlrpc php7.3-gd php7.3-xml php7.3-cli php7.3-zip php7.3-soap php7.3-imap
+php -v
+
+ 
+sudo systemctl status php7.3-fpm
+
+sudo vi /etc/php/7.3/fpm/php.ini
+
+
+yum install nginx
+systemctl status nginx.service
+systemctl start nginx.service
+
+```
