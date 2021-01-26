@@ -8,6 +8,16 @@ make linux test
 sudo make install
 ```
 
+## Install luarocks 3.5
+```
+wget https://luarocks.org/releases/luarocks-3.5.0.tar.gz
+tar zxpf luarocks-3.5.0.tar.gz
+cd luarocks-3.5.0
+./configure --with-lua-include=/usr/local/include
+make
+sudo make install
+```
+
 ## Prerequsities
 ```bash
 sudo apt-get update
