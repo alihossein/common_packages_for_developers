@@ -1,3 +1,9 @@
+#### Install openvpn
+#### run : sudo openvpn --config /path/to/config.ovpn
+```
+sudo apt-get install openvpn
+```
+
 ## Install Maven
 ```
 sudo apt-get install maven
