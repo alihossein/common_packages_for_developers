@@ -11,13 +11,19 @@ pipeline {
     }
     stage('Test') {
       steps {
-       if (env.BRANCH_NAME=='master'){
-           echo '[X] Test 1 ....'
-       }else
-       {
-           echo '[X] Test 2 ....'
-
-       }
+          script {
+              if (env.BRANCH_NAME=='master') {
+                        stage ('Stage 1') {
+                            echo '[X] Test 1 ....'
+                        }
+                    }
+                    if (env.BRANCH_NAME!='master') {
+                        stage ('Stage 2') {
+                            echo '[X] Test 2 ....'
+                        }
+                    }
+          }
+       
       }
     }
     stage('Deploy') {
