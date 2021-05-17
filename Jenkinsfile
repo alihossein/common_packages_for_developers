@@ -11,12 +11,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        try {
-          echo '[X] Testing..'
-        }
-        catch (err){
-          echo err
-        }
+       echo '[X] Test....'
       }
     }
     stage('Deploy') {
