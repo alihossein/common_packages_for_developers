@@ -14,7 +14,7 @@ pipeline {
         try {
           echo '[X] Testing..'
         }
-        catchh (err){
+        catch (err){
           echo err
         }
       }
