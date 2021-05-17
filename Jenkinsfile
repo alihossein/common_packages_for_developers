@@ -6,6 +6,7 @@ pipeline {
       steps {
         echo 'Building..'
         echo env.BRANCH_NAME
+        echo 'Building Finished'
       }
     }
     stage('Test') {
