@@ -4,19 +4,24 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building..'
+        echo '[X] Building..'
         echo env.BRANCH_NAME
-        echo 'Building Finished'
+        echo '[X] Building Finished'
       }
     }
     stage('Test') {
       steps {
-        echo 'Testing..'
+        try {
+          echo '[X] Testing..'
+        }
+        catchh (err){
+          echo err
+        }
       }
     }
     stage('Deploy') {
       steps {
-        echo 'Deploying....'
+        echo '[X] Deploying....'
       }
     }
   }
