@@ -1,6 +1,6 @@
 node{
     stage("build"){
-        checkout scm
+        //checkout scm
         print_some_text("ali")
         println(pwd())
         dir('/var/jenkins_home'){
@@ -17,10 +17,13 @@ node{
         for (i = 0; i <3; i++) {
             println(i)
         }
-        for(int i in output) { 
+        
+        String[] str
+        str = output.split(' ');
+        println(str)
+         for(int i in str) { 
          println(i); 
-        } 
-        println(output.getClass() )
+        }
         
     }
 }
