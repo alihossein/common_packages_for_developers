@@ -19,7 +19,8 @@ node{
         }
         for(int i in output) { 
          println(i); 
-      } 
+        } 
+        println(output.getClass() )
         
     }
 }
