@@ -1,6 +1,6 @@
 node{
     stage("build"){
-        //checkout scm
+        checkout scm
         print_some_text("ali")
         println(pwd())
         dir('/var/jenkins_home'){
@@ -20,10 +20,13 @@ node{
         
         String[] str
         str = output.split(' ');
+        println('type of is : ...')
         println(str)
+        println('start for...')
          for(int i in str) { 
          println(i); 
         }
+        println('end for...')
         
     }
 }
