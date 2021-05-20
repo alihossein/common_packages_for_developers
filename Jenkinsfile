@@ -12,6 +12,8 @@ node{
         println(res)
         def res1 = sh([ script: 'git log -n 1 --pretty=format:%H', returnStdout: true ]).trim()
         println(res1)
+        def output= sh([ script: 'git log ${res1} --pretty="format:" --name-only -1', returnStdout: true ]).trim()
+        println(output)
         
     }
 }
