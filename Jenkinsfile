@@ -20,10 +20,13 @@ node{
         
         String[] str
         str = output.split(' ');
+        println('type of is : ...')
         println(str)
+        println('start for...')
          for(int i in str) { 
          println(i); 
         }
+        println('end for...')
         
     }
 }
