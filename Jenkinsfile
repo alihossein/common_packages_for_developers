@@ -14,6 +14,9 @@ node{
         println(res1)
         def output= sh([ script: 'git log ${res1} --pretty="format:" --name-only -1', returnStdout: true ]).trim()
         println(output)
+        for (i = 0; i <3; i++) {
+            println(i)
+        }
         
     }
 }
