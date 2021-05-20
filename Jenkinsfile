@@ -5,7 +5,7 @@ node{
         dir('/var/jenkins_home'){
          println(pwd())   
         }
-        def res = sh([ script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true ]).trim()
+        def res = sh([ script: 'git rev-parse HEAD', returnStdout: true ]).trim()
         println(res)
         
     }
