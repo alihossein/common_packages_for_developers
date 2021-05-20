@@ -17,6 +17,9 @@ node{
         for (i = 0; i <3; i++) {
             println(i)
         }
+        for(int i in output) { 
+         println(i); 
+      } 
         
     }
 }
