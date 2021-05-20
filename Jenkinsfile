@@ -1,8 +1,10 @@
-stage('Build') {
-    node {
-        echo 'Pulling...' + env.BRANCH_NAME
-        echo env.GIT_PREVIOUS_COMMIT
-        
-        
+node{
+    stage("build"){
+        print_some_text("ali")
+        println(pwd())
     }
+}
+
+def print_some_text(String my_name){
+    echo "welcome ... ${my_name}"
 }
