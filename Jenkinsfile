@@ -1,5 +1,6 @@
 node{
     stage("build"){
+        checkout scm
         print_some_text("ali")
         println(pwd())
         dir('/var/jenkins_home'){
