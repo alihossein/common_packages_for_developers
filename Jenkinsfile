@@ -5,8 +5,12 @@ node{
         dir('/var/jenkins_home'){
          println(pwd())   
         }
+        
+        
         def res = sh([ script: 'git rev-parse HEAD', returnStdout: true ]).trim()
         println(res)
+        def res1 = sh([ script: 'git log -n 1 --pretty=format:%H', returnStdout: true ]).trim()
+        println(res1)
         
     }
 }
