@@ -1,8 +1,10 @@
 node {
   stage("build") {
     //checkout scm
-    // def aa = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
-    // println(aa)
+     def aa = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
+     println(aa)
+    println(jsonInputString.getClass())
+    
 
     def postmanGet = new URL('http://10.10.0.44:8888/druid/indexer/v1/task')
     def connectionObject = (HttpURLConnection) postmanGet.openConnection()
