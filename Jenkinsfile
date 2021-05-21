@@ -7,12 +7,27 @@ node {
       println(pwd())
     }
 
-    def res = sh([script: 'git rev-parse HEAD', returnStdout: true]).trim()
-    println(res)
-    def res1 = sh([script: 'git log -n 1 --pretty=format:%H', returnStdout: true]).trim()
-    println(res1)
-    def output = sh([script: 'git log ${res1} --pretty="format:" --name-only -1', returnStdout: true]).trim()
-    println(output)
+    // get last commit id
+    def res = sh([script: 'git log -n 1 --pretty=format:%H', returnStdout: true]).trim()
+    // get which files were changed in last commit 
+    def output = sh([script: 'git log ${res} --pretty="format:" --name-only -1', returnStdout: true]).trim()
+    
+    
+    def postmanGet = new URL('https://postman-echo.com/get')
+def getConnection = postmanGet.openConnection()
+getConnection.requestMethod = 'GET'
+if (getConnection.responseCode == 201){
+    println("[X] send request successfully...")
+}else {
+    println("[X] can not send request ... try again ...")
+
+}
+
+println("Finish")
+    
+    
+    
+     
 
     String[] files_list
     files_list = output.split(' ');
