@@ -2,6 +2,21 @@ node {
   stage("build") {
     //checkout scm
     
+    
+    // Get last commit_id
+    def res = sh([ script: 'git log -n 1 --pretty=format:%H', returnStdout: true ]).trim()
+    // list all the files in a commit
+    def output= sh([ script: 'git log ${res1} --pretty="format:" --name-only -1', returnStdout: true ]).trim()
+    
+    // Convert String value to list
+    String[] str
+    files_list = output.split(' ');
+  
+     for(full_file_name i in files_list) { 
+        println(full_file_name); 
+     }
+    
+    
     send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
     
    
