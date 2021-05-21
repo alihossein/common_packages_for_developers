@@ -1,4 +1,5 @@
 {
+  
   "type": "index_parallel",
   "resource": {
     "availabilityGroup": "index_parallel_wikipedia22_2021-04-28T08:20:54.447Z",
