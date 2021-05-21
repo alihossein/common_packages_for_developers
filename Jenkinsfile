@@ -16,7 +16,7 @@ node {
     def postmanGet = new URL('https://postman-echo.com/get')
 def getConnection = postmanGet.openConnection()
 getConnection.requestMethod = 'GET'
-if (getConnection.responseCode == 201){
+if (getConnection.responseCode == 200){
     println("[X] send request successfully...")
 }else {
     println("[X] can not send request ... try again ...")
