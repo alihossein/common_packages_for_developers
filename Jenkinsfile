@@ -11,13 +11,18 @@ node {
     // Convert String value to list
     String[] str
     files_list = output.split(' ');
-  
-     for(full_file_name in files_list) { 
-        println(full_file_name); 
-     }
+    
+    // Check each file and send a new request If the file is valid
+     for (String file_name in files_list) {
+      if (file_name.startsWith("json")) {
+         send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
+      } else {
+         send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
+      }
+    }
     
     
-    send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
+   
     
    
     println("Finish")
