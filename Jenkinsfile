@@ -12,7 +12,7 @@ node {
     String[] str
     files_list = output.split(' ');
   
-     for(full_file_name i in files_list) { 
+     for(full_file_name in files_list) { 
         println(full_file_name); 
      }
     
