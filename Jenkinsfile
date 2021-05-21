@@ -14,11 +14,13 @@ node {
     
     // Check each file and send a new request If the file is valid
      for (String file_name in files_list) {
-      if (file_name.startsWith("json")) {
-         send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
-      } else {
-         send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
-      }
+        println("File name is :  $file_name ")
+        if (file_name.startsWith("Druid/Ingestion")) {
+           send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
+        } else {
+          println("This file ( $file_name )  is not available in the druid directory")
+           
+        }
     }
     
     
