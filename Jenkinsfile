@@ -10,7 +10,10 @@ node {
     connectionObject.requestMethod = 'POST'
     connectionObject.setDoOutput(true)
     
-    // String jsonInputString = '{"name": "Upendra", "job": "Programmer"}'
+    String jsonInputString1 = '{"name": "Upendra", "job": "Programmer"}'
+    println(jsonInputString1)
+    
+    
     String jsonInputString = aa
     OutputStream os = connectionObject.getOutputStream()
         byte[] input = jsonInputString.getBytes("utf-8");
