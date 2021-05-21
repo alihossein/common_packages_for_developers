@@ -2,6 +2,7 @@ node {
   stage("build") {
     checkout scm
     def projects = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
+    println(projects)
 
     
 
