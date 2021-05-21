@@ -1,9 +1,10 @@
 node {
   stage("build") {
     //checkout scm
-     def aa = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
-     println(aa)
-    println(jsonInputString.getClass())
+     //def aa = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
+     //println(aa)
+   import jenkins.model.*
+jenkins = Jenkins.instance
     
 
     def postmanGet = new URL('http://10.10.0.44:8888/druid/indexer/v1/task')
