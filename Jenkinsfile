@@ -2,7 +2,17 @@ node {
   stage("build") {
     //checkout scm
     
-    // Create a URL object
+    send_request_to_druid("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
+    
+   
+    println("Finish")
+
+  }
+}
+
+def send_request_to_druid(String file_name){
+  
+  // Create a URL object
     def urlObject = new URL('http://10.10.0.44:8888/druid/indexer/v1/task')
     //Open a Connection .  this method only creates a connection object but doesn't establish the connection yet.
     def connectionObject = urlObject.openConnection()
@@ -17,7 +27,7 @@ node {
     connectionObject.setReadTimeout(5000)
     
 
-    def myFile = new File("/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json")
+    def myFile = new File(file_name)
     String jsonInputString=myFile.text
 
     OutputStream os = connectionObject.getOutputStream()
@@ -32,9 +42,4 @@ node {
       println(connectionObject.content.text)
 
     }
- 
-
-    println("Finish")
-
-  }
 }
