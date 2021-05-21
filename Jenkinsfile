@@ -1,8 +1,8 @@
 node {
   stage("build") {
     //checkout scm
-    String jsonInputString = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
-    println(jsonInputString)
+    def aa = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
+    println(aa)
 
     def postmanGet = new URL('http://10.10.0.44:8888/druid/indexer/v1/task')
     def connectionObject = (HttpURLConnection) postmanGet.openConnection()
@@ -10,7 +10,8 @@ node {
     connectionObject.requestMethod = 'POST'
     connectionObject.setDoOutput(true)
     
-    //String jsonInputString = '{"name": "Upendra", "job": "Programmer"}'
+    // String jsonInputString = '{"name": "Upendra", "job": "Programmer"}'
+    String jsonInputString = aa
     OutputStream os = connectionObject.getOutputStream()
         byte[] input = jsonInputString.getBytes("utf-8");
         os.write(input, 0, input.length);
