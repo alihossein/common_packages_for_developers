@@ -9,6 +9,12 @@ node {
     connectionObject.setRequestProperty("Content-Type", "application/json")
     connectionObject.requestMethod = 'POST'
     connectionObject.setDoOutput(true)
+    
+    String jsonInputString = '{"name": "Upendra", "job": "Programmer"}'
+    try(OutputStream os = connectionObject.getOutputStream()) {
+        byte[] input = jsonInputString.getBytes("utf-8");
+        os.write(input, 0, input.length);
+    }
 
     
 
