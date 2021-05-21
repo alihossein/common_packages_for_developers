@@ -1,7 +1,7 @@
 node {
   stage("build") {
     //checkout scm
-    def jsonInputString = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
+    String jsonInputString = readJSON file: "/var/jenkins_home/workspace/new3/common_packages_for_developers/json/1.json"
     println(jsonInputString)
 
     def postmanGet = new URL('http://10.10.0.44:8888/druid/indexer/v1/task')
