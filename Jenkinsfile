@@ -3,7 +3,7 @@ node {
     //checkout scm
     
     // Create a URL object
-    def urlObject = new URL('https://postman-echo.com/get')
+    def urlObject = new URL('http://10.10.0.44:8888/druid/indexer/v1/task')
     //Open a Connection .  this method only creates a connection object but doesn't establish the connection yet.
     def connectionObject = urlObject.openConnection()
     //Set the Request Method
