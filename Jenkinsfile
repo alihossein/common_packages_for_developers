@@ -1,6 +1,6 @@
 node {
   stage("build") {
-    //checkout scm
+   checkout scm
     
     
     // Get last commit_id
